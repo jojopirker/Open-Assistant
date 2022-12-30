@@ -1,11 +1,11 @@
 import React from "react";
 import { TaskOptions } from "./TaskOptions";
-import { Flex } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 import { TaskOption } from "./TaskOption";
 
 export const TaskSelection = () => {
   return (
-    <Flex gap={10} wrap="wrap" justifyContent="space-evenly" width="full" height="full" alignItems={"center"}>
+    <Flex gap={10} wrap="wrap" justifyContent="space-evenly" width="full" height="full" alignItems={"center"} >
       <TaskOptions key="create" title="Create">
         {/* <TaskOption
           alt="Summarize Stories"

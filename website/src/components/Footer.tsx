@@ -4,7 +4,7 @@ import { Container } from "./Container";
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="border-t border-gray-200">
       <main>
         <Container className="">
           <div className="flex flex-wrap justify-between gap-y-12 py-10 lg:items-center lg:py-16">

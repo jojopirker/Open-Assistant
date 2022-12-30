@@ -1,3 +1,4 @@
+import { Button, ColorModeScript, useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import { useSession } from "next-auth/react";
 
@@ -7,12 +8,14 @@ import { Hero } from "src/components/Hero";
 import { TaskSelection } from "src/components/TaskSelection";
 import { Header } from "src/components/Header";
 import { Footer } from "src/components/Footer";
+import {  theme } from "src/pages/_app";
 
 const Home = () => {
   const { data: session } = useSession();
-
+  
   return (
     <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <Head>
         <title>Open Assistant</title>
         <meta
@@ -21,7 +24,7 @@ const Home = () => {
         />
       </Head>
       {session ? (
-        <main className="my-4">
+        <main>
           <TaskSelection />
         </main>
       ) : (
@@ -32,6 +35,7 @@ const Home = () => {
           <Faq />
         </main>
       )}
+
     </>
   );
 };

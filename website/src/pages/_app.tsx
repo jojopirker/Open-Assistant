@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import { Inter } from "@next/font/google";
 import { extendTheme } from "@chakra-ui/react";
@@ -14,16 +14,22 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const theme = extendTheme({
+const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: true,
+}
+
+export const theme = extendTheme({
+  config:  {
+    initialColorMode: 'light',
+    useSystemColorMode: true,
+  },
   styles: {
     global: {
-      body: {
-        bg: "white",
-      },
       main: {
         fontFamily: "Inter",
       },
-      header: {
+      header:{
         fontFamily: "Inter",
       },
     },

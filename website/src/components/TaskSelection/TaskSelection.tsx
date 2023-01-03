@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
 
 import { TaskOption } from "./TaskOption";
@@ -6,7 +6,7 @@ import { TaskOptions } from "./TaskOptions";
 
 export const TaskSelection = () => {
   return (
-    <Flex gap={10} wrap="wrap" justifyContent="space-evenly" width="full" height="full" alignItems={"center"}>
+    <Stack gap={10}>
       <TaskOptions key="create" title="Create">
         {/* <TaskOption
           alt="Summarize Stories"
@@ -50,6 +50,6 @@ export const TaskSelection = () => {
           link="/evaluate/rank_assistant_replies"
         />
       </TaskOptions>
-    </Flex>
+    </Stack>
   );
 };
